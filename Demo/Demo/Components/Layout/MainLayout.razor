@@ -1,8 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider/>
-<MudDialogProvider/>
-<MudSnackbarProvider/>
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar Elevation="1">
@@ -10,20 +10,37 @@
         My Application
         <MudSpacer />
         <MudToolBar>
-            <MudButton StartIcon="@Icons.Material.Outlined.HistoryEdu" Color="Color.Inherit">
-                <p class="appbar-btn">Education</p>
-            </MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.Info"><p class="appbar-btn">Info</p></MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.Work"><p class="appbar-btn">Works</p></MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport"><p class="appbar-btn">Contact</p></MudButton>
+            <div>
+                <MudTooltip Text="Education" Arrow="true" Placement="Placement.Top">
+                    <MudButton StartIcon="@Icons.Material.Outlined.HistoryEdu" Color="Color.Inherit">
+                        <p class="appbar-btn">Education</p>
+                    </MudButton>
+                </MudTooltip>
+                <MudTooltip Text="Information" Arrow="true" Placement="Placement.Top">
+                    <MudButton StartIcon="@Icons.Material.Outlined.Info">
+                        <p class="appbar-btn">Info</p>
+                    </MudButton>
+                </MudTooltip>
+                <MudTooltip Text="Experiance" Arrow="true" Placement="Placement.Top">
+                    <MudButton StartIcon="@Icons.Material.Outlined.Work">
+                        <p class="appbar-btn">Works</p>
+                    </MudButton>
+                </MudTooltip>
+                <MudTooltip Text="Contact me" Arrow="true" Placement="Placement.Top">
+                    <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport">
+                        <p class="appbar-btn">Contact</p>
+                    </MudButton>
+                </MudTooltip>
+            </div>
+
         </MudToolBar>
     </MudAppBar>
     <div>
-     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.False">
-            @Body
-        </MudContainer>
-    </MudMainContent>
+        <MudMainContent>
+            <MudContainer MaxWidth="MaxWidth.False">
+                @Body
+            </MudContainer>
+        </MudMainContent>
     </div>
 </MudLayout>
 
