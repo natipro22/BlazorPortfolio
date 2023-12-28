@@ -10,33 +10,21 @@
         My Application
         <MudSpacer />
         <MudToolBar>
-            <MudHidden Breakpoint="Breakpoint.Lg" Invert="true">
-                Lala
-            </MudHidden>
             <MudButton StartIcon="@Icons.Material.Outlined.HistoryEdu" Color="Color.Inherit">
                 <p class="appbar-btn">Education</p>
             </MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.Info" >Info</MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.Work" >Works</MudButton>
-            <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport" >Contact</MudButton>
-                 @* <MudIconButton Icon="@Icons.Material.Outlined.HistoryEdu" />
-                 <MudIconButton Icon="@Icons.Material.Outlined.Info" />
-                 <MudIconButton Icon="@Icons.Material.Outlined.Work" />
-                 <MudIconButton Icon="@Icons.Material.Outlined.ContactSupport" /> *@
-            
+            <MudButton StartIcon="@Icons.Material.Outlined.Info"><p class="appbar-btn">Info</p></MudButton>
+            <MudButton StartIcon="@Icons.Material.Outlined.Work"><p class="appbar-btn">Works</p></MudButton>
+            <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport"><p class="appbar-btn">Contact</p></MudButton>
         </MudToolBar>
     </MudAppBar>
-    @*  <MudDrawer @bind-Open="@_drawerOpen" Elevation="1">
-          <MudDrawerHeader>
-              <MudText Typo="Typo.h5" Class="mt-1">Application</MudText>
-          </MudDrawerHeader>
-         <NavMenu/>
-     </MudDrawer>*@
+    <div>
      <MudMainContent>
-        @* <MudContainer MaxWidth="MaxWidth.Medium"> *@
+        <MudContainer MaxWidth="MaxWidth.False">
             @Body
-        @* </MudContainer> *@
+        </MudContainer>
     </MudMainContent>
+    </div>
 </MudLayout>
 
 @* <div class="page">
