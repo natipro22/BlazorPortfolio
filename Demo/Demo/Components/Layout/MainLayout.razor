@@ -1,0 +1,71 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" @onclick="DrawerToggl" />
+        My Application
+        <MudSpacer />
+        <MudToolBar>
+            <MudHidden Breakpoint="Breakpoint.Lg" Invert="true">
+                Lala
+            </MudHidden>
+            <MudButton StartIcon="@Icons.Material.Outlined.HistoryEdu" Color="Color.Inherit">
+                <p class="appbar-btn">Education</p>
+            </MudButton>
+            <MudButton StartIcon="@Icons.Material.Outlined.Info" >Info</MudButton>
+            <MudButton StartIcon="@Icons.Material.Outlined.Work" >Works</MudButton>
+            <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport" >Contact</MudButton>
+                 @* <MudIconButton Icon="@Icons.Material.Outlined.HistoryEdu" />
+                 <MudIconButton Icon="@Icons.Material.Outlined.Info" />
+                 <MudIconButton Icon="@Icons.Material.Outlined.Work" />
+                 <MudIconButton Icon="@Icons.Material.Outlined.ContactSupport" /> *@
+            
+        </MudToolBar>
+    </MudAppBar>
+    @*  <MudDrawer @bind-Open="@_drawerOpen" Elevation="1">
+          <MudDrawerHeader>
+              <MudText Typo="Typo.h5" Class="mt-1">Application</MudText>
+          </MudDrawerHeader>
+         <NavMenu/>
+     </MudDrawer>*@
+     <MudMainContent>
+        @* <MudContainer MaxWidth="MaxWidth.Medium"> *@
+            @Body
+        @* </MudContainer> *@
+    </MudMainContent>
+</MudLayout>
+
+@* <div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div> *@
+
+@* <div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div> *@
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggl()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}
