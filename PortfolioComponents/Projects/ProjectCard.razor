@@ -1,0 +1,18 @@
+﻿<MudCard>
+    <MudCardMedia Image="@Project.Image" Height="200" />
+    <MudCardContent>
+        <MudText Typo="Typo.h5">@Project.Name</MudText>
+        <MudText Typo="Typo.body2">@Project.Description</MudText>
+    </MudCardContent>
+    <MudCardActions>
+            <MudLink Href="@Project.Url" Target="_blank">
+                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+            </MudLink>
+    </MudCardActions>
+</MudCard>
+
+
+@code {
+    [Parameter]
+    public Models.Project Project { get; set; }
+}

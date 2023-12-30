@@ -1,0 +1,18 @@
+﻿@page "/projects"
+@using Demo.DataSource
+@using PortfolioComponents.Projects
+@using PortfolioComponents.Models
+
+<PageTitle>Projects</PageTitle>
+
+<h1>Projects</h1>
+<ProjectsList Projects="@_projects"></ProjectsList>
+
+@code {
+    private List<Project> _projects;
+    protected override void OnInitialized()
+    {
+        _projects = MyProjects.GetProjects();
+        base.OnInitialized();
+    }
+}

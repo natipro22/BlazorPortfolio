@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo\Demo.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Client", "Demo\Demo.Client\Demo.Client.csproj", "{65521A26-B955-4D4C-ADFF-73FA6597FD6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioComponents", "PortfolioComponents\PortfolioComponents.csproj", "{7434C301-8823-47B0-80EF-1BDB1464C5F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortfolioComponents", "PortfolioComponents\PortfolioComponents.csproj", "{7434C301-8823-47B0-80EF-1BDB1464C5F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

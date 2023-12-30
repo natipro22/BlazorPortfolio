@@ -1,0 +1,15 @@
+﻿@using Models
+@using MudBlazor.Services
+<MudGrid>
+    @foreach (Models.Skill skill in Skills)
+    {
+        <MudItem sm="4" lg="2" md="4">
+            <SkillCard Skill="@skill" />
+        </MudItem>
+    }
+</MudGrid>
+
+@code {
+    [Parameter]
+    public List<Skill> Skills { get; set; }
+}

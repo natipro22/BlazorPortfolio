@@ -1,0 +1,16 @@
+﻿@page "/profile"
+@using Demo.DataSource
+@using PortfolioComponents.Profile
+<PageTitle>Profile</PageTitle>
+
+
+<Profile MyProfile="@_myProfile">
+</Profile>
+@code {
+    private PortfolioComponents.Models.Profile _myProfile;
+    protected override void OnInitialized()
+    {
+        _myProfile = MyProfile.GetProfile();
+        base.OnInitialized();
+    }
+}

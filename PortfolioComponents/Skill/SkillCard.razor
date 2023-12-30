@@ -1,0 +1,14 @@
+﻿@using Models
+<MudCard>
+    <MudCardContent>
+     <MudImage Src="@Skill.Image" ObjectFit="ObjectFit.ScaleDown" Alt="@Skill.Name" Width="180" Height="100"    />
+    </MudCardContent>
+    <MudCardActions Style="justify-content: center">
+        <MudLink Href=@Skill.Url>@Skill.Name</MudLink>
+    </MudCardActions>
+</MudCard>
+
+@code {
+    [Parameter]
+    public Skill Skill { get; set; }
+}

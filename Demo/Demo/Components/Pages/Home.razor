@@ -1,8 +1,38 @@
 ﻿@page "/"
-
+@using PortfolioComponents.Models
+@using System.Text.Json
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 <Component1></Component1>
+@* <PortfolioComponents.Skill.Skill Name="Blazor" Image="def_profile.png"></PortfolioComponents.Skill.Skill> *@
+<PortfolioComponents.Skill.SkillList Skills="@_skills"></PortfolioComponents.Skill.SkillList>
+
+@code {
+    private List<Skill>? _skills;
+    protected override void OnInitialized()
+    {
+        var webRoot = WebHostEnvironment.WebRootPath;
+
+        // Specify the path to your JSON file
+        var jsonFilePath = Path.Combine(webRoot, "Skills.json");
+        try
+        {
+            // Read the entire contents of the file
+            string skillsjson = File.ReadAllText(jsonFilePath);
+
+            // Deserialize the JSON array into a list of Skill objects
+            _skills = JsonSerializer.Deserialize<List<Skill>>(skillsjson);
+            // Console.WriteLine(_skills[0].Name + " " + _skills[0].Image + " " + _skills[0].Url);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            throw;
+        }
+        base.OnInitialized();
+    }
+}

@@ -1,0 +1,41 @@
+﻿@using Models
+<MudCard Elevation="1" Style="justify-content: center" Class="mt-4">
+	<MudGrid>
+		<MudItem xs="6" md="12" lg="4" >
+			@* <MudItem Class="d-flex flex-wrap mb-8"> *@
+			<MudImage Src="avatar.png" Alt="profile image" Width="360" Height="450" />
+			</MudItem>
+		@* </MudItem> *@
+		<MudItem lg="6">
+			<MudCard Elevation="0">
+				<MudCardContent >
+					<MudText Typo="Typo.h6" Class="mb-1">Profile</MudText>
+					<MudText Typo="Typo.subtitle2" Class="mb-4">@MyProfile.Name</MudText>
+						<MudText Typo="Typo.body2" Class="mb-4"><b>Education Level:</b> @MyProfile.EducationLevel</MudText>
+						<MudText Typo="Typo.body2" Class="mb-4"><b>Department</b> @MyProfile.Department</MudText>
+						<MudText Typo="Typo.body2" Class="mb-4"><b>Grade</b> @MyProfile.Grade</MudText>
+						<MudText Typo="Typo.body2" Class="mb-4"><b>Role</b> @MyProfile.Job</MudText>
+						<MudText Typo="Typo.body2" Class="mb-0">
+							<b>About me</b>
+							@MyProfile.Summary
+					</MudText>
+				</MudCardContent>
+				<MudCardActions Class="pa-0 ma-0">
+					<MudLink Class="ml-4 my-0" Color="Color.Primary" Href="/contact" Target="_blank">Contact ...</MudLink>
+				</MudCardActions>
+			</MudCard>
+		</MudItem>
+	</MudGrid>
+	
+</MudCard>
+
+
+@code {
+	[Parameter]
+	public Models.Profile? MyProfile { get; set; }
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+	}
+}

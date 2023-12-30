@@ -10,61 +10,42 @@
         My Application
         <MudSpacer />
         <MudToolBar>
-            <div>
+            <MudNavMenu Color="Color.Success">
                 <MudTooltip Text="Education" Arrow="true" Placement="Placement.Top">
-                    <MudButton StartIcon="@Icons.Material.Outlined.HistoryEdu" Color="Color.Inherit">
-                        <p class="appbar-btn">Education</p>
-                    </MudButton>
+
+                    <MudNavLink Href="/skills" Icon="@Icons.Material.Outlined.HistoryEdu">
+                        <p class="appbar-btn">Skills</p>
+                    </MudNavLink>
                 </MudTooltip>
                 <MudTooltip Text="Information" Arrow="true" Placement="Placement.Top">
-                    <MudButton StartIcon="@Icons.Material.Outlined.Info">
+                    <MudNavLink Href="/profile" Icon="@Icons.Material.Outlined.Info">
                         <p class="appbar-btn">Info</p>
-                    </MudButton>
+                    </MudNavLink>
+
                 </MudTooltip>
                 <MudTooltip Text="Experiance" Arrow="true" Placement="Placement.Top">
-                    <MudButton StartIcon="@Icons.Material.Outlined.Work">
-                        <p class="appbar-btn">Works</p>
-                    </MudButton>
+                    <MudNavLink Href="/projects" Icon="@Icons.Material.Outlined.Work">
+                        <p class="appbar-btn">Projects</p>
+                    </MudNavLink>
                 </MudTooltip>
                 <MudTooltip Text="Contact me" Arrow="true" Placement="Placement.Top">
-                    <MudButton StartIcon="@Icons.Material.Outlined.ContactSupport">
+                    <MudNavLink Href="/contact" Icon="@Icons.Material.Outlined.ContactSupport">
                         <p class="appbar-btn">Contact</p>
-                    </MudButton>
+                    </MudNavLink>
                 </MudTooltip>
-            </div>
+            </MudNavMenu>
+            
 
         </MudToolBar>
     </MudAppBar>
     <div>
         <MudMainContent>
-            <MudContainer MaxWidth="MaxWidth.False">
+            <MudContainer Class="mt-6" MaxWidth="MaxWidth.ExtraLarge">
                 @Body
             </MudContainer>
         </MudMainContent>
     </div>
 </MudLayout>
-
-@* <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div> *@
-
-@* <div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div> *@
 
 @code {
     bool _drawerOpen = false;

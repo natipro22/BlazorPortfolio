@@ -1,0 +1,16 @@
+﻿@using PortfolioComponents.Models
+
+
+<MudGrid>
+    @foreach (Project project in Projects)
+    {
+        <MudItem sm="4" lg="2" md="4">
+            <ProjectCard Project="@project" />
+        </MudItem>
+    }
+</MudGrid>
+
+@code {
+    [Parameter]
+    public List<Project> Projects { get; set; }
+}

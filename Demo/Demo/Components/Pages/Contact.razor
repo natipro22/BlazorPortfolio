@@ -1,0 +1,14 @@
+﻿@page "/contact"
+@using PortfolioComponents.Contacts
+@using PortfolioComponents.Models
+@using Demo.DataSource
+
+<ContactMe Address="@_address"></ContactMe>
+@code {
+    private Address _address;
+    protected override void OnInitialized()
+    {
+        _address = ContactInfo.GetAddress();
+        base.OnInitialized();
+    }
+}

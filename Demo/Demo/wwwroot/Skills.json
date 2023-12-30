@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Swagger",
+    "image": "swagger.png",
+    "url": "https://en.wikipedia.org/wiki/Swagger_%28software%29"
+  },
+  {
+    "name": "ASP.NET",
+    "image": "aspdotnet.jpg",
+    "url": ""
+  },
+  {
+    "name": "Blazor",
+    "image": "blazor.png",
+    "url": ""
+  },
+  {
+    "name": "C#",
+    "image": "c#.jpg",
+    "url": ""
+  },
+  {
+    "name": "LINQ",
+    "image": "linq.jpg",
+    "url": ""
+  },
+  {
+    "name": "Sql Server",
+    "image": "sql-server.png",
+    "url": ""
+  },
+  {
+    "name": "Mysql",
+    "image": "mysql.jpg",
+    "url": ""
+  },
+  {
+    "name": "Postman",
+    "image": "postman.png",
+    "url": ""
+  },
+  {
+    "name": "Web API",
+    "image": "web-api.png",
+    "url": ""
+  },
+  {
+    "name": "Git",
+    "image": "git.png",
+    "url": ""
+  },
+  {
+    "name": "GitHub",
+    "image": "github.jpg",
+    "url": ""
+  }
+]
